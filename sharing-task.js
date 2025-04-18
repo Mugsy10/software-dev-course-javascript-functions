@@ -89,3 +89,28 @@ reusable functions that solve specific tasks. This activity encourages:
 // - Explain how your team approached the design and testing process
 
 // ✅ Bonus: Can you extend any of the functions to be more flexible or reusable?
+// Task 1: Generate Attendee Badge
+function generateBadge(name, role) {
+    const capitalizedRole = role.charAt(0).toUpperCase() + role.slice(1).toLowerCase();
+    return `Name: ${name}, Role: ${capitalizedRole}`;
+  }
+
+  // Task 2: Calculate Event Cost
+function calculateEventCost(attendees, costPerAttendee) {
+    let total = attendees * costPerAttendee;
+    if (attendees > 100) {
+      total *= 0.9;  // Apply 10% discount
+    }
+    return total;
+  }
+
+  // Task 3: Validate Email
+function validateEmail(email) {
+    return email.includes("@") && email.includes(".");
+  }
+  
+
+  // Test
+console.log(generateBadge("Alice", "speaker"));
+console.log(calculateEventCost(120, 25));
+console.log(validateEmail("alice@example.com"));
