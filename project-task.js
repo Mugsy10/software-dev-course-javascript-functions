@@ -72,3 +72,32 @@ for (let i = 0; i < names.length; i++) {
 */
 
 // ✅ Your refactored code goes below this line!
+// Function to greet a user
+function greet(name) {
+   console.log(`Welcome, ${name}!`);
+ }
+ 
+ // Function to calculate and display math operations
+ function calculateAndDisplay(num1, num2, operation, operationName) {
+   let result = operation(num1, num2);
+   console.log(`The ${operationName} of ${num1} and ${num2} is ${result}`);
+   return result;
+ }
+ 
+ // Function to add two numbers
+ function add(a, b) {
+   return a + b;
+ }
+ 
+ // Function to multiply two numbers
+ function multiply(a, b) {
+   return a * b;
+ }
+ 
+//Test
+greet("Alice");
+greet("Bob");     
+greet("Charlie");
+
+calculateAndDisplay(5, 10, add, "sum");
+calculateAndDisplay(5, 10, multiply, "product");      
